@@ -1,0 +1,50 @@
+.order_success {
+  margin: auto;
+  margin-top: 80px;
+  text-align: center;
+  padding: 10vmax;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.order_success > svg {
+  font-size: 7vmax;
+  color: tomato;
+}
+.order_success > p {
+  font-size: 2vmax;
+}
+.order_success > a {
+  background-color: rgb(51, 51, 51);
+  color: white;
+  border: none;
+  padding: 1vmax 3vmax;
+  cursor: pointer;
+  font: 400 1vmax "Roboto";
+  text-decoration: none;
+  margin: 2vmax;
+}
+
+.thankyou_for_shopping {
+  margin-top: 10px !important;
+  font-size: 1.7vmax !important;
+  color: grey;
+}
+
+@media screen and (max-width: 600px) {
+  .order_success > a {
+    padding: 3vw 6vw;
+    font: 400 4vw "Roboto";
+    margin: 2vmax;
+  }
+
+  .order_success > svg {
+    font-size: 20vw;
+  }
+  .order_success > p {
+    margin: 2vmax;
+    font-size: 5vw;
+  }
+}

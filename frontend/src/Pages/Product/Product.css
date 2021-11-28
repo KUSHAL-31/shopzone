@@ -1,0 +1,258 @@
+.slider_filterbox {
+  width: 180px !important;
+}
+
+.product_topbox {
+  margin-top: 90px;
+}
+
+.productSection {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+}
+
+.productsHeading {
+  margin: 2vmax auto;
+  margin-bottom: 1vmax;
+  text-align: center;
+  font: 500 1.8rem "Roboto";
+  width: 15vw;
+  padding: 1vmax;
+  color: rgba(0, 0, 0, 0.699);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+}
+
+.productsContainer {
+  margin-top: 1vmax;
+  margin-left: 6vmax;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  padding: 0 5vmax;
+}
+
+.product_searchbar {
+  position: absolute;
+  top: 6.6rem;
+  right: 3rem;
+}
+
+.product_searchbar > input {
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+  font: 400 0.9rem "Roboto";
+  padding: 0.3vmax 0.5vmax;
+}
+
+.product_searchbar > input::placeholder {
+  color: rgb(192, 191, 191);
+}
+
+.product_searchbar > button {
+  border: none;
+  outline: none;
+  background-color: tomato;
+  font: 500 1rem "Roboto";
+  transition: all 0.5s;
+  border-radius: 20px;
+  padding: 0.6vmax 1vmax;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.product_searchbar > button:hover {
+  background-color: rgb(202, 69, 45);
+}
+
+.pagination_box {
+  display: flex;
+  justify-content: center;
+  margin: 6vmax;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+}
+
+.page-item {
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid rgba(31, 31, 31, 0.267);
+  padding: 1vmax 1.5vmax;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.page-item:first-child {
+  border-radius: 7px 0 0 7px;
+  background-color: rgb(228, 228, 228);
+}
+
+.page-item:last-child {
+  border-radius: 0 7px 7px 0;
+  background-color: rgb(228, 228, 228);
+}
+
+.page-link {
+  color: rgb(129, 129, 129);
+  font: 400 1rem "Roboto";
+  transition: all 0.3s;
+}
+
+.page-item:first-child .page-link,
+.page-item:last-child .page-link {
+  color: black;
+}
+
+.page-item:hover {
+  background-color: rgb(228, 228, 228);
+}
+
+.page-item:hover .page-link {
+  color: black;
+}
+
+.pageItemActive {
+  background-color: tomato;
+}
+
+.pageLinkActive {
+  color: rgb(255, 255, 255);
+}
+
+.filterbox > h2 {
+  text-align: center;
+  color: rgb(71, 71, 71);
+  font: 500 1.5rem "Roboto";
+}
+
+.MuiSlider-root {
+  margin-top: 1.5rem;
+}
+
+.MuiSlider-track {
+  color: tomato;
+}
+
+.MuiSlider-thumb {
+  color: tomato !important;
+}
+
+.productContainer {
+  width: 85%;
+}
+
+.filterbox {
+  /* background-color: rgb(231, 180, 180); */
+  width: 15%;
+  padding-left: 2vmax;
+  padding-right: 2vmax;
+}
+
+.categoryHeading {
+  font-size: 1.3rem !important;
+  font-weight: 500 !important;
+}
+
+.categorybox {
+  padding: 0;
+  margin-top: 0.5rem;
+}
+
+.category_link {
+  margin-top: 0.7vmax;
+  list-style: none;
+  font: 400 1rem "Roboto";
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.category_link:hover {
+  color: tomato;
+}
+
+@media screen and (max-width: 830px) {
+  .MuiSlider-root {
+    margin-top: 0.3rem;
+  }
+
+  .productsHeading {
+    margin: auto;
+    text-align: center;
+    font: 500 1.5rem "Roboto";
+    width: 30%;
+    padding: 1vmax;
+    color: rgba(0, 0, 0, 0.699);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.226);
+  }
+
+  .product_searchbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10rem;
+    right: 1rem;
+  }
+
+  .product_searchbar > button {
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    background-color: tomato;
+    font: 500 1rem "Roboto";
+    width: 50%;
+    padding: 0.6vmax 1vmax;
+    margin-left: 0px;
+  }
+
+  .productSection {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    align-items: flex-start;
+    margin-top: 20px;
+  }
+
+  .categorybox {
+    width: 98vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+  }
+  .categorybox li {
+    margin: 0 25px;
+    margin-top: 10px;
+  }
+  .productContainer {
+    width: 100%;
+  }
+  .productsContainer {
+    margin-top: 1vmax;
+    margin-left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 5vmax;
+  }
+  .filterbox > h2 {
+    text-align: center;
+    color: rgb(71, 71, 71);
+    font: 500 1.3rem "Roboto";
+    margin-top: -10px;
+  }
+  .slider_filterbox {
+    width: 130px !important;
+  }
+  .product_searchbar > input {
+    outline: none;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.301);
+    font: 400 0.9rem "Roboto";
+    padding: 0.3vmax 0vmax;
+  }
+}

@@ -1,0 +1,94 @@
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans&display=swap");
+
+.footer {
+  width: 100%;
+  background-color: rgb(238, 238, 238);
+  font-family: "Work Sans";
+  height: fit-content;
+}
+
+footer {
+  padding-top: 20px;
+  width: 85%;
+  margin: auto;
+  height: 220px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer__content {
+  margin-top: 20px;
+  flex: 0.2;
+}
+
+.footer__content h3 {
+  font-size: 1.4rem;
+  color: var(--purple);
+}
+
+.social__icons {
+  margin-top: 20px;
+  display: flex;
+}
+
+.social__icon {
+  font-size: 2rem;
+  color: rgb(88, 88, 88);
+  margin-left: 5px;
+}
+
+.footer__content ul li {
+  margin-top: 15px;
+}
+
+.footer__link {
+  color: rgb(78, 78, 78);
+}
+
+.copyright {
+  color: #fff;
+  background-color: rgb(27, 27, 27);
+  width: 100%;
+  text-align: center;
+  padding: 7px 0;
+}
+
+@media screen and (max-width: 900px) {
+  footer {
+    width: 95%;
+  }
+  .footer__content h3 {
+    font-size: 1.15rem;
+  }
+  .social__icon {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  footer {
+    padding-top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: auto;
+    flex-wrap: nowrap;
+    text-align: left;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  .footer__content h3 {
+    font-size: 1.4rem;
+  }
+  .social__icon {
+    font-size: 1.9rem;
+  }
+  .footer__content {
+    flex: 1;
+    margin-top: 35px;
+  }
+}

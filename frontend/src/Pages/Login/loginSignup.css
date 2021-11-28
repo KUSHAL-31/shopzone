@@ -1,0 +1,223 @@
+.login_signup_container {
+  margin-top: 80px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.login_signup_box {
+  background-color: rgb(243, 243, 243);
+  width: 400px;
+  height: 470px;
+  overflow: hidden;
+}
+
+.login_signup_toggle {
+  display: flex;
+  height: 50px;
+}
+
+.login_signup_toggle > p {
+  color: rgb(19, 16, 65);
+  font: 400 1.1rem "Roboto";
+  transition: all 0.5s;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.login_signup_toggle > p:hover {
+  color: tomato;
+}
+
+.login_signup_box > div > button {
+  background-color: tomato;
+  height: 3px;
+  width: 50%;
+  border: none;
+  transition: all 0.5s;
+}
+
+.login_form,
+.signup_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 83%;
+  padding: 30px;
+  transition: all 0.5s;
+}
+
+.signup_form {
+  transform: translateY(-100%) translateX(-100vmax);
+}
+
+.login_form > div,
+.signup_form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.login_form > div > input,
+.signup_form > div > input {
+  margin: 12px 0;
+  padding: 10px 60px;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  outline: none;
+  font: 300 1.1rem cursive;
+  color: rgb(0, 0, 0);
+}
+
+.login_form > div > input::placeholder,
+.signup_form > div > input::placeholder {
+  color: rgb(151, 151, 151);
+}
+
+.login_form > div > svg,
+.signup_form > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.8rem;
+  color: rgb(151, 151, 151);
+}
+
+.forget_password {
+  color: tomato;
+  font-size: 1.1rem;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.forget_password:hover {
+  color: rgb(201, 80, 59);
+}
+
+.login_button,
+.signup_button {
+  cursor: pointer;
+  color: white;
+  background-color: tomato;
+  font: 400 1.2rem "Roboto";
+  width: 100%;
+  transition: all 0.3s;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 17px;
+}
+
+.login_button:hover,
+.signup_button:hover {
+  background-color: rgb(201, 80, 59);
+}
+
+.signup_image {
+  margin: 10px 0;
+}
+
+.signup_image > img {
+  width: 2.9rem;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.signup_image > input {
+  display: flex;
+  padding: 0 !important;
+}
+
+.signup_image > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  z-index: 2;
+  height: 1.9rem;
+  margin: 0;
+  font: 400 0.9rem cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  background-color: #fff;
+}
+
+.signup_image > input::file-selector-button:hover {
+  background-color: rgb(202, 202, 202);
+}
+
+.leftShift {
+  transform: translateX(-100%);
+}
+
+.rightShift {
+  transform: translateX(100%);
+}
+
+.neutralShift {
+  transform: translateX(0%);
+}
+
+.neutralFormShift {
+  transform: translateX(0%) translateY(-100%);
+}
+
+@media screen and (max-width: 600px) {
+  .login_signup_container {
+    margin-top: 110px;
+    background-color: white;
+  }
+  .login_signup_box {
+    width: 100vw;
+    height: 95vh;
+  }
+  .login_signup_toggle {
+    height: 5vmax;
+  }
+  .login_signup_toggle > p {
+    font: 500 1rem "Roboto";
+  }
+
+  .login_form,
+  .signup_form {
+    padding: 5vmax;
+  }
+
+  .login_form > div > input,
+  .signup_form > div > input {
+    padding: 1.8vmax 5vmax;
+    font: 300 1.1rem cursive;
+    padding-left: 45px;
+  }
+
+  .login_form > div > svg,
+  .signup_form > div > svg {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+
+  .login_form > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  .login_button,
+  .signup_button {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+  .forget_password {
+    font-size: 1.3rem !important;
+  }
+}

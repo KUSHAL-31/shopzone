@@ -1,0 +1,27 @@
+.reviewCard {
+  flex: none;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.226);
+  width: 350px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin: 15px;
+  padding: 45px;
+}
+
+.reviewCard > img {
+  width: 4.7rem;
+}
+
+.reviewCard > p {
+  margin-top: 5px;
+  font: 600 1rem "Roboto";
+  color: rgba(0, 0, 0, 0.712);
+}
+
+.reviewCard > span {
+  margin-top: 5px;
+  color: rgba(44, 44, 44, 0.726);
+  font: 500 0.9rem cursive;
+}

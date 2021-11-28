@@ -1,0 +1,84 @@
+.product_card {
+  width: 16vmax;
+  display: flex;
+  flex-direction: column;
+  color: rgb(48, 48, 48);
+  margin: 2vmax;
+  transition: all 0.5s;
+  padding-bottom: 0.5vmax;
+  border: 1px solid rgb(231, 231, 231);
+}
+
+.product_card > img {
+  padding-top: 10px;
+  width: 70%;
+  margin: auto;
+  object-fit: contain;
+  /* height: 12vmax; */
+  /* object-fit: cover; */
+}
+
+.product_card > div {
+  width: 100%;
+  margin: 0.5 0vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product_card > div > span {
+  margin: 0.5vmax;
+  margin-top: 0.7vmax;
+  font: 300 1vmax "Roboto";
+}
+
+.product_card > span {
+  margin: 0.5vmax;
+  color: tomato;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 1.3vmax;
+  text-align: center;
+}
+
+.product_card > p {
+  font-family: "Roboto";
+  font-size: 1.2vmax;
+  margin: 1vmax 0.5vmax;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.product_card:hover {
+  box-shadow: 0 0 5px rgba(15, 15, 15, 0.26);
+  transform: translateY(-1vmax);
+}
+
+@media screen and (max-width: 1200px) {
+  .product_card {
+    width: 19vmax;
+  }
+  .product_card > span {
+    font-size: 1.1rem;
+  }
+  .product_card > div > span {
+    font: 300 1.1vmax "Roboto";
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .product_card {
+    width: 30vmax;
+  }
+  .product_card > div > span {
+    font: 300 1.7vmax "Roboto";
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .product_card {
+    width: 55vmax;
+  }
+  .product_card > div > span {
+    font: 300 2.3vmax "Roboto";
+  }
+}

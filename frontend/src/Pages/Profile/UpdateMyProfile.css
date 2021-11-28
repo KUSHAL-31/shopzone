@@ -1,0 +1,164 @@
+.updateProfileHeading {
+  width: 50%;
+  margin: auto;
+  text-align: center;
+  padding: 1.1vmax;
+  font: 400 1.3rem "Roboto";
+  border-bottom: 1px solid rgba(0, 0, 0, 0.247);
+  color: rgba(0, 0, 0, 0.658);
+}
+
+.updateProfile_container {
+  margin-top: 80px;
+  width: 100%;
+  height: calc(100vh - 80px);
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+}
+
+.updateProfile_box {
+  background-color: rgb(243, 243, 243);
+  width: 400px;
+  height: 470px;
+  overflow: hidden;
+}
+
+.updateProfile_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  height: 83%;
+  padding: 30px;
+  transition: all 0.5s;
+}
+
+.updateProfile_form > div {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.updateProfile_form > div > input {
+  margin: 0.7vmax 0;
+  padding: 10px 60px;
+  padding-right: 1vmax;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid rgba(0, 0, 0, 0.274);
+  border-radius: 5px;
+  outline: none;
+  font: 300 1.1rem cursive;
+  color: rgb(0, 0, 0);
+}
+
+.updateProfile_form > div > input::placeholder {
+  color: rgb(151, 151, 151);
+}
+.updateProfile_form > div > svg {
+  position: absolute;
+  transform: translateX(1vmax);
+  font-size: 1.8rem;
+  color: rgb(151, 151, 151);
+}
+
+.forget_password {
+  color: tomato;
+  font-size: 1.1rem;
+  font-weight: 500;
+  align-self: flex-start;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.forget_password:hover {
+  color: rgb(201, 80, 59);
+}
+
+.updateProfile_button {
+  cursor: pointer;
+  color: white;
+  background-color: tomato;
+  font: 400 1.2rem "Roboto";
+  width: 100%;
+  transition: all 0.3s;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 9px 17px;
+}
+
+.updateProfile_button:hover {
+  background-color: rgb(201, 80, 59);
+}
+
+.updateProfile_image {
+  margin: 10px 0;
+}
+
+.updateProfile_image > img {
+  width: 2.9rem;
+  border-radius: 100%;
+  margin-right: 10px;
+}
+
+.updateProfile_image > input {
+  display: flex;
+  padding: 0 !important;
+}
+
+.updateProfile_image > input::file-selector-button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  z-index: 2;
+  height: 1.9rem;
+  margin: 0;
+  font: 400 0.9rem cursive;
+  transition: all 0.5s;
+  padding: 0 1vmax;
+  background-color: #fff;
+}
+
+.updateProfile_image > input::file-selector-button:hover {
+  background-color: rgb(202, 202, 202);
+}
+
+@media screen and (max-width: 600px) {
+  .updateProfile_container {
+    margin-top: 110px;
+    background-color: white;
+  }
+  .updateProfile_box {
+    width: 100vw;
+    height: 95vh;
+  }
+
+  .updateProfile_form {
+    padding: 5vmax;
+  }
+
+  .updateProfile_form > div > input {
+    padding: 1.8vmax 5vmax;
+    font: 300 1.1rem cursive;
+    padding-left: 45px;
+  }
+
+  .updateProfile_form div > svg {
+    margin-left: 5px;
+    font-size: 1.5rem;
+  }
+
+  .updateProfile_form > a {
+    font: 500 1.8vmax "Gill Sans";
+  }
+
+  .updateProfile_button {
+    font: 300 1.9vmax "Roboto";
+    padding: 1.8vmax;
+  }
+}

@@ -1,0 +1,34 @@
+.sidebar {
+  padding: 3rem 0;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar a {
+  transition: all 0.3s;
+  color: rgb(31, 31, 31);
+  padding: 2rem;
+  font-size: 1.1rem;
+  font-family: "Roboto";
+}
+
+.sidebar a:hover {
+  color: tomato;
+  transform: scale(1.1);
+}
+
+.sidebar a p {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar a p svg {
+  margin-right: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .sidebar a:first-child h1 {
+    font-size: 2.2rem;
+  }
+}

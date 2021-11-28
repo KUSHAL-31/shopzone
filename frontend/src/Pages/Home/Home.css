@@ -1,0 +1,42 @@
+.home_heading {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.7vmax;
+  font-weight: 400;
+  border-bottom: 1px solid #000;
+  width: 20vmax;
+  padding: 1vmax;
+  margin: 3vmax auto;
+}
+
+.featured_container {
+  display: flex;
+  justify-content: center;
+  margin: 2vmax auto;
+  width: 80vw;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+
+.loading {
+  margin-top: 80px;
+  width: 100vw;
+  height: calc(100vh - 80px);
+  background-color: rgb(255, 255, 255);
+  display: grid;
+  place-items: center;
+}
+
+.loading div {
+  width: 10vmax;
+  height: 10vmax;
+  border-bottom: 7px solid rgb(110, 110, 110);
+  border-radius: 50%;
+  animation: RotatingLoader 800ms linear infinite;
+}
+
+@keyframes RotatingLoader {
+  to {
+    transform: rotateZ(-360deg);
+  }
+}
