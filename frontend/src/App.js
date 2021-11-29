@@ -1,5 +1,6 @@
 import './App.css';
 import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import ProductDetail from './components/ProductDetail/ProductDetail'
@@ -33,7 +34,7 @@ import UsersList from './components/Admin/UsersList/UsersList'
 import UpdateUser from './components/Admin/UpdateUser/UpdateUser'
 import ProductReviews from './components/Admin/ProductReviews/ProductReviews'
 import About from './Pages/About/About';
-import NotFound from './Pages/NotFound/NotFound';
+
 
 function App() {
 
@@ -56,15 +57,15 @@ function App() {
 
     <>
       <Router>
-        <Header />
-
-        {authUser && <UserOptions user={user} />}
 
         {stripeApiKey && (<Elements stripe={loadStripe(stripeApiKey)}>
           {authUser && <Route exact path="/process/payment" component={Payment}>
           </Route>}
         </Elements>)}
 
+        <ScrollToTop />
+        <Header />
+        {authUser && <UserOptions user={user} />}
         <Switch>
           <Route exact path="/" component={Home}>
           </Route>
@@ -112,7 +113,6 @@ function App() {
           </Route> : <Redirect to="/login" />}
           {user && user.role === "admin" ? <Route exact path="/admin/reviews" component={ProductReviews}>
           </Route> : <Redirect to="/login" />}
-          <Route component={window.location.pathname === "/process/payment" ? null : NotFound} />
         </Switch>
         <Footer />
       </Router>

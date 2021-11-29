@@ -1,6 +1,6 @@
 .aboutSection {
-  margin-top: 40px;
-  height: 100vh;
+  margin-top: 80px;
+  height: calc(100vh - 80px);
   width: 100vw;
   max-width: 100%;
   background-color: white;
@@ -64,7 +64,7 @@
 
 .aboutSectionContainer > div > div > span {
   margin-top: 20px;
-  font: 100 1vmax "Roboto";
+  font: 400 1rem "Roboto";
   color: rgba(0, 0, 0, 0.616);
   text-align: center;
   width: 80%;
@@ -94,6 +94,10 @@
 
 .instagramSvgIcon {
   color: rgb(144, 81, 202);
+}
+
+.githubSvgIcon {
+  color: rgb(36, 41, 47);
 }
 
 @media screen and (max-width: 600px) {

@@ -68,7 +68,7 @@
 
 .profile_container > div:last-child > div > p {
   color: rgba(0, 0, 0, 0.418);
-  font: 400 1.1rem cursive;
+  font: 400 1.1rem "Roboto";
   margin: 0.2vmax;
 }
 
@@ -122,7 +122,7 @@
   }
 
   .profile_container > div:last-child > div > p {
-    font: 400 1rem cursive;
+    font: 400 1rem "Roboto";
     margin: 0.5vmax 0;
   }
 

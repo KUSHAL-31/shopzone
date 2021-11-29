@@ -1,4 +1,5 @@
 import React from "react";
+import MetaData from '../MetaData'
 import "./About.css";
 import { Typography, Avatar } from "@material-ui/core";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
@@ -9,6 +10,7 @@ import Creator from '../../images/Kushal.jfif'
 const About = () => {
     return (
         <div className="aboutSection">
+            <MetaData title="ShopZone | About Us"></MetaData>
             <div></div>
             <div className="aboutSectionGradient"></div>
             <div className="aboutSectionContainer">
@@ -23,7 +25,8 @@ const About = () => {
                         />
                         <Typography>Kushal Soni</Typography>
                         <span>
-                            ShopZone is a MERN stack Ecommerce website project created by me for learning purpose
+                            ShopZone is a MERN stack Ecommerce project developed by me for learning purpose.
+
                         </span>
                     </div>
                     <div className="aboutSectionContainer2">

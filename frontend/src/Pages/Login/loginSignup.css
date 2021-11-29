@@ -77,7 +77,7 @@
   border: 1px solid rgba(0, 0, 0, 0.274);
   border-radius: 5px;
   outline: none;
-  font: 300 1.1rem cursive;
+  font: 300 1.1rem "Roboto";
   color: rgb(0, 0, 0);
 }
 
@@ -148,7 +148,7 @@
   z-index: 2;
   height: 1.9rem;
   margin: 0;
-  font: 400 0.9rem cursive;
+  font: 400 0.9rem "Roboto";
   transition: all 0.5s;
   padding: 0 1vmax;
   background-color: #fff;
@@ -198,7 +198,7 @@
   .login_form > div > input,
   .signup_form > div > input {
     padding: 1.8vmax 5vmax;
-    font: 300 1.1rem cursive;
+    font: 300 1.1rem "Roboto";
     padding-left: 45px;
   }
 

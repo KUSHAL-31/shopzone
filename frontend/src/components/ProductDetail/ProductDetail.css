@@ -24,7 +24,9 @@
 }
 
 .CarouselImage {
-  width: 25vmax;
+  width: 25vmax !important;
+  height: 23vmax !important;
+  object-fit: contain !important;
 }
 
 .productDetailBox1 > h2 {
@@ -34,7 +36,7 @@
 
 .productDetailBox1 > p {
   color: rgba(54, 54, 54, 0.585);
-  font: 200 0.9rem cursive;
+  font: 400 0.9rem "Roboto";
   margin: 0.8vmax 0;
 }
 
@@ -52,7 +54,7 @@
   margin-top: 3px;
   margin-left: 5px;
   color: rgba(54, 54, 54, 0.582);
-  font: 200 0.8rem cursive;
+  font: 400 1rem "Roboto";
 }
 
 .productDetailBox3 > h1 {
