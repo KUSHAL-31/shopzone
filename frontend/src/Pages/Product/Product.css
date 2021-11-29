@@ -37,6 +37,7 @@
   position: absolute;
   top: 6.6rem;
   right: 3rem;
+  z-index: 2;
 }
 
 .product_searchbar > input {
@@ -219,7 +220,7 @@
   }
 
   .categorybox {
-    width: 98vw;
+    width: 90vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
@@ -254,5 +255,33 @@
     border-bottom: 1px solid rgba(0, 0, 0, 0.301);
     font: 400 0.9rem "Roboto";
     padding: 0.3vmax 0vmax;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .productsHeading {
+    border-bottom: none;
+  }
+
+  .product_searchbar {
+    display: flex;
+    flex-direction: row;
+    top: 150px;
+    left: 15%;
+  }
+  .product_searchbar > button {
+    width: 30%;
+    margin-top: 0;
+    background-color: rgba(255, 99, 71, 0.781);
+  }
+  .productSection {
+    margin-top: 75px;
+  }
+  .filterbox > h2 {
+    width: 90vw;
+  }
+  .slider_filterbox {
+    margin-left: 35px;
+    width: 70vw !important;
   }
 }

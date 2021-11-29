@@ -31,4 +31,8 @@
   .sidebar a:first-child h1 {
     font-size: 2.2rem;
   }
+  .sidebar a:hover {
+    color: rgb(31, 31, 31);
+    transform: scale(1);
+  }
 }

@@ -52,7 +52,9 @@
     font-size: 1.2rem;
   }
   .slide img {
-    height: 45%;
+    width: 85%;
+    height: 40%;
+    object-fit: contain;
   }
   .text-part {
     width: 90%;

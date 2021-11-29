@@ -7,6 +7,7 @@
   transition: all 0.5s;
   padding-bottom: 0.5vmax;
   border: 1px solid rgb(231, 231, 231);
+  min-height: 19vmax;
 }
 
 .product_card > img {
@@ -77,6 +78,7 @@
 @media screen and (max-width: 540px) {
   .product_card {
     width: 55vmax;
+    min-height: 35vmax;
   }
   .product_card > div > span {
     font: 300 2.3vmax "Roboto";

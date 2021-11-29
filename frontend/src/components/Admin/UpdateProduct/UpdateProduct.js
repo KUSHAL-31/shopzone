@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import './UpdateProduct.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { useAlert } from 'react-alert'
 import { clearErrors, updateProduct, getProductDetail } from '../../../actions/productAction'

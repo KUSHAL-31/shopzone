@@ -132,6 +132,8 @@
 
 .signup_image > img {
   width: 2.9rem;
+  height: 2.9rem;
+  object-fit: contain;
   border-radius: 100%;
   margin-right: 10px;
 }

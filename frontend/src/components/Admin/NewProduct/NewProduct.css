@@ -126,6 +126,7 @@
 
   #createProductFormImage > img {
     width: 10vmax;
+    height: 10vmax;
     object-fit: contain;
   }
 
