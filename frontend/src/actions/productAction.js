@@ -109,7 +109,7 @@ export const createProduct = (productData) => async (dispatch) => {
             }
         }
 
-        const { data } = await axios.post(`/api/v1/admin/product/new`, productData, config);
+        const { data } = await axios.post(`/api/v1/admin/product/new`, JSON.stringify(productData), config);
         dispatch({
             type: NEW_PRODUCT_SUCCESS,
             payload: data,

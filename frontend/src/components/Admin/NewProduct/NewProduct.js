@@ -49,18 +49,18 @@ const NewProduct = ({ history }) => {
     const createProductSubmitHandler = (e) => {
         e.preventDefault();
 
-        const myForm = new FormData();
+        // const myForm = new FormData();
 
-        myForm.set("name", name);
-        myForm.set("price", price);
-        myForm.set("description", description);
-        myForm.set("category", category);
-        myForm.set("stock", stock);
+        // myForm.set("name", name);
+        // myForm.set("price", price);
+        // myForm.set("description", description);
+        // myForm.set("category", category);
+        // myForm.set("stock", stock);
 
-        images.forEach((image) => {
-            myForm.append("images", image);
-        });
-        dispatch(createProduct(myForm));
+        // images.forEach((image) => {
+        //     myForm.append("images", image);
+        // });
+        dispatch(createProduct({ name, price, description, category, stock, images }));
     };
 
     const createProductImagesChange = (e) => {
