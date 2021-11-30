@@ -34,6 +34,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .order_success {
+    margin-top: 60px;
+  }
   .order_success > a {
     padding: 3vw 6vw;
     font: 400 4vw "Roboto";

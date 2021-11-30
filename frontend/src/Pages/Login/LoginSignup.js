@@ -27,10 +27,6 @@ const LoginSignup = ({ history, location }) => {
 
     const { username, email, password } = user;
 
-    const [avatar, setAvatar] = useState();
-    const [avatarPreview, setAvatarPreview] = useState("publicDefaultProfile.jpg");
-
-
     const LoginSubmit = (e) => {
         e.preventDefault();
         dispatch(login(loginEmail, loginPassword));
@@ -42,23 +38,11 @@ const LoginSignup = ({ history, location }) => {
         myForm.set("username", username)
         myForm.set("email", email)
         myForm.set("password", password)
-        myForm.set("avatar", avatar)
         dispatch(register(myForm));
     }
 
     const signupDataChange = (e) => {
-        if (e.target.name === "avatar") {
-            const reader = new FileReader();
-            reader.onload = () => {
-                if (reader.readyState === 2) {
-                    setAvatarPreview(reader.result);
-                    setAvatar(reader.result);
-                }
-            };
-            reader.readAsDataURL(e.target.files[0]);
-        } else {
-            setUser({ ...user, [e.target.name]: e.target.value });
-        }
+        setUser({ ...user, [e.target.name]: e.target.value });
     }
 
     const redirect = location.search ? location.search.split("=")[1] : "/account";
@@ -153,13 +137,6 @@ const LoginSignup = ({ history, location }) => {
                                     placeholder="Password"
                                     required
                                     value={password}
-                                    onChange={signupDataChange}
-                                />
-                            </div>
-                            <div className="signup_image">
-                                <img src={avatarPreview} alt="Avatar preview" />
-                                <input type="file" name="avatar"
-                                    accept="image/*"
                                     onChange={signupDataChange}
                                 />
                             </div>

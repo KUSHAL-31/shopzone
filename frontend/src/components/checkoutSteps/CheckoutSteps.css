@@ -15,3 +15,9 @@
 .MuiStepConnector-completed {
   background-color: tomato;
 }
+
+@media screen and (max-width: 750px) {
+  .checkOutSteps {
+    padding-top: 5px !important;
+  }
+}

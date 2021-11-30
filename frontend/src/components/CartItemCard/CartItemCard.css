@@ -17,13 +17,13 @@
 }
 
 .CartItemCard > div > a {
-  font: 300 1.1vmax "Roboto";
+  font: 500 1.1vmax "Roboto";
   color: rgba(24, 24, 24, 0.815);
   text-decoration: none;
 }
 
 .CartItemCard > div > span {
-  font: 300 1vmax "Roboto";
+  font: 400 1vmax "Roboto";
   color: rgba(24, 24, 24, 0.815);
 }
 

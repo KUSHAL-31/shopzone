@@ -1,5 +1,5 @@
 import './App.css';
-import { Route, BrowserRouter as Router, Switch, Redirect } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import ScrollToTop from './components/ScrollToTop'
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
@@ -34,6 +34,7 @@ import UsersList from './components/Admin/UsersList/UsersList'
 import UpdateUser from './components/Admin/UpdateUser/UpdateUser'
 import ProductReviews from './components/Admin/ProductReviews/ProductReviews'
 import About from './Pages/About/About';
+import ProtectedRoute from './components/ProtectedRoute';
 
 
 function App() {
@@ -58,14 +59,16 @@ function App() {
     <>
       <Router>
 
+        <ScrollToTop />
+        <Header />
+
         {stripeApiKey && (<Elements stripe={loadStripe(stripeApiKey)}>
-          {authUser && <Route exact path="/process/payment" component={Payment}>
+          {<Route exact path="/process/payment" component={Payment}>
           </Route>}
         </Elements>)}
 
-        <ScrollToTop />
-        <Header />
         {authUser && <UserOptions user={user} />}
+
         <Switch>
           <Route exact path="/" component={Home}>
           </Route>
@@ -79,40 +82,83 @@ function App() {
           </Route>
           <Route exact path="/products/:keyword" component={Product}>
           </Route>
-          {authUser && <Route exact path="/account" component={Profile}>
-          </Route>}
-          {authUser && <Route exact path="/me/update" component={UpdateMyProfile}>
-          </Route>}
+
+          <ProtectedRoute exact path="/account" component={Profile} />
+
+          <ProtectedRoute exact path="/me/update" component={UpdateMyProfile} />
+
           <Route exact path="/cart" component={Cart}>
           </Route>
-          {authUser && <Route exact path="/shipping" component={Shipping}>
-          </Route>}
-          {authUser && <Route exact path="/success" component={OrderSuccess}>
-          </Route>}
-          {authUser && <Route exact path="/orders" component={MyOrders}>
-          </Route>}
-          {authUser && <Route exact path="/order/confirm" component={ConfirmOrder}>
-          </Route>}
-          {authUser && <Route exact path="/order/:id" component={OrderDetails}>
-          </Route>}
-          {user && user.role === "admin" ? <Route exact path="/admin/dashboard" component={DashBoard}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/products" component={ProductList}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/product" component={NewProduct}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/product/:id" component={UpdateProduct}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/orders" component={OrderList}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/order/:id" component={ProcessOrder}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/users" component={UsersList}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/user/:id" component={UpdateUser}>
-          </Route> : <Redirect to="/login" />}
-          {user && user.role === "admin" ? <Route exact path="/admin/reviews" component={ProductReviews}>
-          </Route> : <Redirect to="/login" />}
+
+          <ProtectedRoute exact path="/shipping" component={Shipping} />
+
+          <ProtectedRoute exact path="/success" component={OrderSuccess} />
+
+          <ProtectedRoute exact path="/orders" component={MyOrders} />
+
+          <ProtectedRoute exact path="/order/confirm" component={ConfirmOrder} />
+
+          <ProtectedRoute exact path="/order/:id" component={OrderDetails} />
+
+          <ProtectedRoute
+            isAdmin={true}
+            exact
+            path="/admin/dashboard"
+            component={DashBoard}
+          />
+
+          <ProtectedRoute
+            exact
+            path="/admin/products"
+            isAdmin={true}
+            component={ProductList}
+          />
+          <ProtectedRoute
+            exact
+            path="/admin/product"
+            isAdmin={true}
+            component={NewProduct}
+          />
+
+          <ProtectedRoute
+            exact
+            path="/admin/product/:id"
+            isAdmin={true}
+            component={UpdateProduct}
+          />
+          <ProtectedRoute
+            exact
+            path="/admin/orders"
+            isAdmin={true}
+            component={OrderList}
+          />
+
+          <ProtectedRoute
+            exact
+            path="/admin/order/:id"
+            isAdmin={true}
+            component={ProcessOrder}
+          />
+          <ProtectedRoute
+            exact
+            path="/admin/users"
+            isAdmin={true}
+            component={UsersList}
+          />
+
+          <ProtectedRoute
+            exact
+            path="/admin/user/:id"
+            isAdmin={true}
+            component={UpdateUser}
+          />
+
+          <ProtectedRoute
+            exact
+            path="/admin/reviews"
+            isAdmin={true}
+            component={ProductReviews}
+          />
         </Switch>
         <Footer />
       </Router>

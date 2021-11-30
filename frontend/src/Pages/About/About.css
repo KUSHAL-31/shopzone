@@ -101,6 +101,9 @@
 }
 
 @media screen and (max-width: 600px) {
+  .aboutSection {
+    margin-top: 60px;
+  }
   .aboutSectionContainer > div {
     display: block;
   }

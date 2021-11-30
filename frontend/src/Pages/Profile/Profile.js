@@ -26,7 +26,7 @@ const Profile = () => {
                 <div className="profile_container">
                     <div>
                         <h1>My Profile</h1>
-                        <img src={user.avatar.url ? user.avatar.url : "publicDefaultProfile.jpg"} alt="Users avatar" />
+                        <img src="publicDefaultProfile.jpg" alt="Users avatar" />
                         <Link to="/me/update">Edit Profile</Link>
                     </div>
                     <div>

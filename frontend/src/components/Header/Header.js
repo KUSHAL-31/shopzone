@@ -2,7 +2,6 @@ import React from "react";
 import { useSelector } from "react-redux";
 import { Link, useHistory } from 'react-router-dom'
 import "./Header.css";
-// import UserOptions from '../UserOptions/UserOptions'
 
 function Header() {
 

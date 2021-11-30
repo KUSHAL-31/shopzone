@@ -66,6 +66,13 @@ input[type="checkbox"] {
   }
 }
 @media (max-width: 830px) {
+  nav {
+    height: 60px;
+  }
+  nav .logo {
+    font-size: 25px;
+  }
+
   nav .menu-btn i {
     display: block;
   }
@@ -75,7 +82,7 @@ input[type="checkbox"] {
 
   nav ul {
     position: fixed;
-    top: 80px;
+    top: 60px;
     left: -100%;
     background: #111;
     height: 100vh;

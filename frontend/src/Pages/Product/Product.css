@@ -178,6 +178,10 @@
 }
 
 @media screen and (max-width: 830px) {
+  .product_topbox {
+    margin-top: 70px;
+  }
+
   .MuiSlider-root {
     margin-top: 0.3rem;
   }
@@ -266,13 +270,13 @@
   .product_searchbar {
     display: flex;
     flex-direction: row;
-    top: 150px;
+    top: 130px;
     left: 15%;
   }
   .product_searchbar > button {
     width: 30%;
     margin-top: 0;
-    background-color: rgba(255, 99, 71, 0.781);
+    background-color: rgb(255, 99, 71);
   }
   .productSection {
     margin-top: 75px;

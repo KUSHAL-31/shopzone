@@ -16,8 +16,6 @@ const UpdateMyProfile = ({ history }) => {
     const { user } = useSelector(state => state.user);
     const { error, loading, isUpdated } = useSelector(state => state.profile);
 
-    const [avatar, setAvatar] = useState("");
-    const [avatarPreview, setAvatarPreview] = useState("publicDefaultProfile.jpg");
 
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
@@ -27,26 +25,13 @@ const UpdateMyProfile = ({ history }) => {
         const myForm = new FormData();
         myForm.set("username", username)
         myForm.set("email", email)
-        myForm.set("avatar", avatar)
         dispatch(updateProfile(myForm));
-    }
-
-    const updateProfileDataChange = (e) => {
-        const reader = new FileReader();
-        reader.onload = () => {
-            if (reader.readyState === 2) {
-                setAvatarPreview(reader.result);
-                setAvatar(reader.result);
-            }
-        };
-        reader.readAsDataURL(e.target.files[0]);
     }
 
     useEffect(() => {
         if (user) {
             setUsername(user.username);
             setEmail(user.email);
-            setAvatarPreview(user.avatar.url);
         }
         if (error) {
             alert.error(error);
@@ -91,13 +76,6 @@ const UpdateMyProfile = ({ history }) => {
                                             required
                                             value={email}
                                             onChange={(e) => setEmail(e.target.value)}
-                                        />
-                                    </div>
-                                    <div className="updateProfile_image">
-                                        <img src={avatarPreview} alt="Avatar preview" />
-                                        <input type="file" name="avatar"
-                                            accept="image/*"
-                                            onChange={updateProfileDataChange}
                                         />
                                     </div>
                                     <input type="submit" value="Update" className="updateProfile_button" />

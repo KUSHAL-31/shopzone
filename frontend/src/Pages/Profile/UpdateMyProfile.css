@@ -52,7 +52,7 @@
   border: 1px solid rgba(0, 0, 0, 0.274);
   border-radius: 5px;
   outline: none;
-  font: 300 1.1rem cursive;
+  font: 300 1.1rem "Roboto";
   color: rgb(0, 0, 0);
 }
 
@@ -102,6 +102,8 @@
 
 .updateProfile_image > img {
   width: 2.9rem;
+  height: 2.9rem;
+  object-fit: contain;
   border-radius: 100%;
   margin-right: 10px;
 }
@@ -118,7 +120,7 @@
   z-index: 2;
   height: 1.9rem;
   margin: 0;
-  font: 400 0.9rem cursive;
+  font: 400 0.9rem "Roboto";
   transition: all 0.5s;
   padding: 0 1vmax;
   background-color: #fff;
@@ -130,7 +132,7 @@
 
 @media screen and (max-width: 600px) {
   .updateProfile_container {
-    margin-top: 110px;
+    margin-top: 90px;
     background-color: white;
   }
   .updateProfile_box {
@@ -144,7 +146,7 @@
 
   .updateProfile_form > div > input {
     padding: 1.8vmax 5vmax;
-    font: 300 1.1rem cursive;
+    font: 300 1.1rem "Roboto";
     padding-left: 45px;
   }
 
@@ -154,11 +156,11 @@
   }
 
   .updateProfile_form > a {
-    font: 500 1.8vmax "Gill Sans";
+    font: 500 1.8rem "Gill Sans";
   }
 
   .updateProfile_button {
-    font: 300 1.9vmax "Roboto";
+    font: 300 1.9rem "Roboto";
     padding: 1.8vmax;
   }
 }

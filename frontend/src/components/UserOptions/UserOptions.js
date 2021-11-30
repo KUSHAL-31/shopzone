@@ -57,7 +57,7 @@ const UserOptions = ({ user }) => {
                 direction="down"
                 icon={<img
                     className="speedDialIcon"
-                    src={user.avatar.url ? user.avatar.url : "publicDefaultProfile.jpg"}
+                    src="publicDefaultProfile.jpg"
                     alt="Profile"
                 ></img>}
             >

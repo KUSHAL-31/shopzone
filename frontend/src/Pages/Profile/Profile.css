@@ -97,6 +97,9 @@
 
 @media screen and (max-width: 768px) {
   .profile_container {
+    margin-top: 60px;
+  }
+  .profile_container {
     flex-direction: column;
     margin-bottom: 140px;
   }

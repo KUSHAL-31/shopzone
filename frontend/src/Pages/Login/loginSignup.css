@@ -126,40 +126,6 @@
   background-color: rgb(201, 80, 59);
 }
 
-.signup_image {
-  margin: 10px 0;
-}
-
-.signup_image > img {
-  width: 2.9rem;
-  height: 2.9rem;
-  object-fit: contain;
-  border-radius: 100%;
-  margin-right: 10px;
-}
-
-.signup_image > input {
-  display: flex;
-  padding: 0 !important;
-}
-
-.signup_image > input::file-selector-button {
-  cursor: pointer;
-  width: 100%;
-  border: none;
-  z-index: 2;
-  height: 1.9rem;
-  margin: 0;
-  font: 400 0.9rem "Roboto";
-  transition: all 0.5s;
-  padding: 0 1vmax;
-  background-color: #fff;
-}
-
-.signup_image > input::file-selector-button:hover {
-  background-color: rgb(202, 202, 202);
-}
-
 .leftShift {
   transform: translateX(-100%);
 }
@@ -178,7 +144,7 @@
 
 @media screen and (max-width: 600px) {
   .login_signup_container {
-    margin-top: 110px;
+    margin-top: 90px;
     background-color: white;
   }
   .login_signup_box {
@@ -211,12 +177,12 @@
   }
 
   .login_form > a {
-    font: 500 1.8vmax "Gill Sans";
+    font: 500 1.8rem "Gill Sans";
   }
 
   .login_button,
   .signup_button {
-    font: 300 1.9vmax "Roboto";
+    font: 300 1rem "Roboto";
     padding: 1.8vmax;
   }
   .forget_password {

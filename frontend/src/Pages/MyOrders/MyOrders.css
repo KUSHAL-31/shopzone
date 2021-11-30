@@ -56,17 +56,16 @@
 }
 
 @media screen and (max-width: 600px) {
-  .myOrders_page {
-    padding: 0;
-    height: 93vh;
+  .myOrder_page {
+    margin-top: 60px;
   }
 
-  #myOrders_heading {
+  #myOrder_heading {
     font: 400 2.2vmax "Roboto";
     padding: 4vw;
   }
 
-  .myOrders_table div {
+  .myOrder_table div {
     font: 300 1rem "Roboto";
   }
 

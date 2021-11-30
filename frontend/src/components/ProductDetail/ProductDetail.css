@@ -185,6 +185,7 @@
 
 @media screen and (max-width: 750px) {
   .productDetail {
+    margin-top: 60px;
     flex-direction: column;
     height: unset;
   }

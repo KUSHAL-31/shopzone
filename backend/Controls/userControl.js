@@ -9,23 +9,9 @@ exports.registerUser = asyncErrorHandler(async (req, res, next) => {
 
     let user;
     const { username, email, password } = req.body;
-
-    if (req.body.avatar) {
-        const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-            folder: "avatars",
-        });
-        user = await User.create({
-            username, email, password,
-            avatar: {
-                public_id: myCloud.public_id,
-                url: myCloud.secure_url,
-            }
-        });
-    } else {
-        user = await User.create({
-            username, email, password
-        })
-    }
+    user = await User.create({
+        username, email, password
+    })
     sendToken(user, 201, res);
 });
 
@@ -70,25 +56,6 @@ exports.updateUserProfile = asyncErrorHandler(async (req, res, next) => {
     const newData = {
         username: req.body.username,
         email: req.body.email,
-    }
-
-    if (req.body.avatar !== "") {
-
-        const user = await User.findById(req.user.id);
-        const imageId = user.avatar.public_id;
-        await cloudinary.v2.uploader.destroy(imageId);
-
-        const myCloud = await cloudinary.v2.uploader.upload(req.body.avatar, {
-            folder: "avatars",
-            width: 300,
-            crop: "scale",
-        });
-
-        newData.avatar = {
-            public_id: myCloud.public_id,
-            url: myCloud.secure_url,
-        }
-
     }
 
     await User.findByIdAndUpdate(req.user.id, newData, {
