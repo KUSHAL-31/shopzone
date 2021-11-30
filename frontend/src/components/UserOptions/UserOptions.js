@@ -7,6 +7,7 @@ import { useHistory } from 'react-router';
 import { useAlert } from 'react-alert';
 import { useDispatch } from 'react-redux'
 import { logout } from '../../actions/userActions'
+import profilePic from '../../images/profilePic.jpg'
 
 const UserOptions = ({ user }) => {
 
@@ -57,7 +58,7 @@ const UserOptions = ({ user }) => {
                 direction="down"
                 icon={<img
                     className="speedDialIcon"
-                    src="publicDefaultProfile.jpg"
+                    src={profilePic}
                     alt="Profile"
                 ></img>}
             >
